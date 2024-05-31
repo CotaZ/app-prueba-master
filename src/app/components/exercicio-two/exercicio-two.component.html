@@ -1,0 +1,14 @@
+<p-panel [styleClass]="'terminal-window'" header="{{ problem.title }}" [toggleable]="false">
+  <div>
+    <label for="firstBinary">Primer Número Binario:</label>
+    <input type="text" id="firstBinary" [(ngModel)]="firstBinary">
+  </div>
+  <div>
+    <label for="secondBinary">Segundo Número Binario:</label>
+    <input type="text" id="secondBinary" [(ngModel)]="secondBinary">
+  </div>
+  <button (click)="addBinary()">Sumar</button>
+  <p *ngIf="binaryResult">
+    Resultado: {{ binaryResult }}
+  </p>
+</p-panel>

@@ -1,0 +1,14 @@
+<p-panel [styleClass]="'terminal-window'" header="Problema N° 3" [toggleable]="false">
+  <div>
+    <label for="initSequence">Número Inicial:</label>
+    <input type="number" id="initSequence" [(ngModel)]="initSequence">
+  </div>
+  <div>
+    <label for="countNumbers">Cantidad de Números:</label>
+    <input type="number" id="countNumbers" [(ngModel)]="countNumbers">
+  </div>
+  <button (click)="generateFibonacci()">Generar Fibonacci</button>
+  <div *ngIf="fibonacciNumbers.length > 0">
+    <p>Números de Fibonacci: {{ fibonacciNumbers }}</p>
+  </div>
+</p-panel>

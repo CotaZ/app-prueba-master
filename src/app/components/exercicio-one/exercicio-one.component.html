@@ -1,0 +1,11 @@
+<p-panel [styleClass]="'terminal-window'" header="Problema N° 1" [toggleable]="false">
+  <div>
+    <label for="amount">Monto:</label>
+    <input type="number" id="amount" [(ngModel)]="amount">
+  </div>
+  <button (click)="calculateMinCoins()">Calcular Monedas</button>
+  <div *ngIf="result">
+    <p>Monedas Mínimas: {{ result.minCoins }}</p>
+    <p>Combinación de Monedas: {{ result.coins }}</p>
+  </div>
+</p-panel>
